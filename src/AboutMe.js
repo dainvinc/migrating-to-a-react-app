@@ -2,13 +2,23 @@ import React, {Component} from 'react';
 import './AboutMe.css';
   
 class AboutMe extends Component {
-  changeSection() {
-    this.refs.classList.toggle("new-section2");
+  constructor(props) {
+    super(props);
+    
+    this.handleSection = this.handleSection.bind(this);
   }
+  
+  handleSection() {
+    console.log("Clicked");
+    
+    // this.changeSection();
+    this.refs.changeSection.classList.toggle("newsection4");
+  }
+
   render() {
-      return (
+    return (
       <div> 
-          <div refs="changeSection" className="new-section">
+          <div ref="changeSection" className="new-section">
             <h1 id="title">{this.props.details.name}</h1>
             <p id="caption">{this.props.details.headline}</p>
           </div>
@@ -16,9 +26,13 @@ class AboutMe extends Component {
             <h1 id="title">Objective</h1>
             <p id="caption">{this.props.details.objective}</p>
           </div>
-          <button className="next" type="click" onClick={this.changeSection}>Next ></button>
+          <button 
+            className="next" 
+            type="button" 
+            onClick={this.handleSection}> Next >
+          </button>
       </div>
-      );
+    );
   }
 }
 
