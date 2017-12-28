@@ -1,3 +1,9 @@
 #title {
-    font-family: monospace;
+    font-size: 8em;
+}
+
+.next {
+    background-color: black;
+    color: #1EC503;
+    border: none;
 }
