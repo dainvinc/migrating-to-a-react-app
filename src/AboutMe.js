@@ -8,8 +8,9 @@ class AboutMe extends Component {
     this.handleSection = this.handleSection.bind(this);
   }
   
-  handleSection() {
-    console.log("Clicked");
+  handleSection(e) {
+    if(e.keyCode == 13)
+      console.log("Clicked");
     
     // this.changeSection();
     this.refs.changeSection.classList.toggle("newsection4");
@@ -17,7 +18,7 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div> 
+      <div onKeyPress={this.handleSection}> 
           <div ref="changeSection" className="new-section">
             <h1 id="title">{this.props.details.name}</h1>
             <p id="caption">{this.props.details.headline}</p>
@@ -28,8 +29,7 @@ class AboutMe extends Component {
           </div>
           <button 
             className="next" 
-            type="button" 
-            onClick={this.handleSection}> Next >
+            type="button"> Next >
           </button>
       </div>
     );
