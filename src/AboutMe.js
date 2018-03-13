@@ -9,7 +9,7 @@ class AboutMe extends Component {
   }
   
   handleSection(e) {
-    if(e.keyCode == 13)
+    if(e.keyCode === 13)
       console.log("Clicked");
     
     // this.changeSection();
@@ -20,8 +20,8 @@ class AboutMe extends Component {
     return (
       <div onKeyPress={this.handleSection}> 
           <div ref="changeSection" className="new-section">
-            <h1 id="title">{this.props.details.name}</h1>
-            <p id="caption">{this.props.details.headline}</p>
+            <h1 id="title">{this.props.details.myDetails.name}</h1>
+            <p id="caption">{this.props.details.myDetails.headline}</p>
           </div>
           <div className="new-section2">
             <h1 id="title">Objective</h1>
