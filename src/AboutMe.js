@@ -9,7 +9,7 @@ class AboutMe extends Component {
   }
   
   handleSection(e) {
-    if(e.keyCode === 13)
+    if(e.key === 'Enter')
       console.log("Clicked");
     
     // this.changeSection();
@@ -18,14 +18,14 @@ class AboutMe extends Component {
 
   render() {
     return (
-      <div onKeyPress={this.handleSection}> 
+      <div tabIndex="0" onKeyPress={this.handleSection}> 
           <div ref="changeSection" className="new-section">
             <h1 id="title">{this.props.details.myDetails.name}</h1>
             <p id="caption">{this.props.details.myDetails.headline}</p>
           </div>
           <div className="new-section2">
             <h1 id="title">Objective</h1>
-            <p id="caption">{this.props.details.objective}</p>
+            <p id="caption">{this.props.details.myDetails.objective}</p>
           </div>
           <button 
             className="next" 
