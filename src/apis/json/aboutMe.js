@@ -2,7 +2,10 @@
     {
         name: "Vishal Koosuri",
         headline: "Software Developer",
-        objective: "Self-motivated and passionate Software Developer with a flair for creating elegant solutions. Seeking for an employment opportunity wherein I can build, and utilize my self-taught, collegiate, and internship experiences.",
+        objective: "Self-motivated and passionate Software Developer \
+                    with a flair for creating elegant solutions. Seeking \
+                    for an employment opportunity wherein I can build, and \
+                    utilize my self-taught, collegiate, and internship experiences.",
         address: "Poughkeepsie, NY-12601",
         education: [
             {
